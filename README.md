@@ -1,4 +1,4 @@
-# Text Classification - Cumulative Lab
+# Text Classification - Lab
 
 ## Introduction
 
@@ -77,7 +77,7 @@ Here you will investigate three techniques, to determine whether they should be 
 
 #### 5. Evaluate a Final Model on the Test Set
 
-Once you have chosen a final modeling process, fit it on the full training data and evaluate it on the test data. 
+Once you have chosen a final modeling process, fit it on the full training data and evaluate it on the test data.
 
 ## 1. Load the Data
 
@@ -397,7 +397,7 @@ def visualize_top_10(freq_dist, title):
     ax.set_ylabel("Count")
     ax.yaxis.set_major_locator(MaxNLocator(integer=True))
     ax.tick_params(axis="x", rotation=90)
-    
+
 visualize_top_10(example_freq_dist, "Top 10 Word Frequency for Example Tokens")
 ```
 
@@ -506,7 +506,7 @@ fig.suptitle("Word Frequencies for All Tokens", fontsize=24);
 
 If these were unlabeled, would you be able to figure out which one matched with which category?
 
-Well, `misc.forsale` still has a number (`"00"`) as one of its top tokens, so you might be able to figure out that one, but it seems very difficult to distinguish the others; every single category has `"the"` as the most common token, and every category except for `misc.forsale` has `"to"` as the second most common token. 
+Well, `misc.forsale` still has a number (`"00"`) as one of its top tokens, so you might be able to figure out that one, but it seems very difficult to distinguish the others; every single category has `"the"` as the most common token, and every category except for `misc.forsale` has `"to"` as the second most common token.
 
 After building our baseline model, we'll use this information to inform our next preprocessing steps.
 
@@ -875,7 +875,7 @@ fig.suptitle("Distributions of Posts Containing Emoticons by Category", fontsize
 
 Well, that was a lot less definitive. Emoticons are fairly rare across categories. But, there are some small differences so let's go ahead and keep it.
 
-#### Modeling with Vectorized Features + Engineered Features 
+#### Modeling with Vectorized Features + Engineered Features
 
 Let's combine our best vectorizer with these new features:
 
